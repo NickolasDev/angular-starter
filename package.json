@@ -22,7 +22,7 @@
     "@angular/material": "^6.4.6",
     "@angular/material-moment-adapter": "^6.4.6",
     "@angular/platform-browser": "^6.1.4",
-    "@angular/platform-browser-dynamic": "^6.1.4",
+    "@angular/platform-browser-dynamic": "^6.1.6",
     "@angular/router": "^6.1.4",
     "core-js": "^2.5.7",
     "debug": "^3.1.0",
