@@ -34,7 +34,6 @@ export abstract class FormAbstract<T> implements OnInit {
   }
 
   submit(): void {
-    this.validateAllFormFields(this.form);
     if (this.form.valid) {
       this.loading = true;
       let formValue = Object.assign({}, this.form.value);
@@ -58,7 +57,8 @@ export abstract class FormAbstract<T> implements OnInit {
             this.onError(err);
           });
       }
-
+    }else{
+      this.validateAllFormFields(this.form);
     }
   }
 
@@ -86,7 +86,6 @@ export abstract class FormAbstract<T> implements OnInit {
       const control = formGroup.get(field);
       control.markAsDirty();
       control.markAsTouched();
-      control.updateValueAndValidity();
       if (control instanceof FormGroup || control instanceof FormArray) {
         this.validateAllFormFields(control);
       }
